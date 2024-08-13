@@ -238,10 +238,11 @@ export function Component(): JSX.Element {
                     {showUserUpload && <UploadFile className={styles.commandButton} disabled={loggedIn} />}
                     <SettingsButton className={styles.commandButton} onClick={() => setIsConfigPanelOpen(!isConfigPanelOpen)} />
                 </div>
-                <h1 className={styles.askTitle}>Ask your data</h1>
+                {/*<h1 className={styles.askTitle}>Lookup Data</h1>*/}
+                <h2 className={styles.chatEmptyStateSubtitle}>Lookup Data</h2>
                 <div className={styles.askQuestionInput}>
                     <QuestionInput
-                        placeholder="Example: Does my plan cover annual eye exams?"
+                        placeholder="Example: what technologies does Sunshine Industries use in its infrastructure?"
                         disabled={isLoading}
                         initQuestion={question}
                         onSend={question => makeApiRequest(question)}
